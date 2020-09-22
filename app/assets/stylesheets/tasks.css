@@ -7,6 +7,7 @@
   align-items: center;
   height: 100px;
   background-color: turquoise;
+  width: 100%;
 }
 
 .header-name a{
@@ -19,7 +20,7 @@
   text-decoration: none;
   font-size: 40px;
   color: azure;
-  padding-left: 200px;
+  margin-right: 50px;
 }
 .links a{
   text-decoration: none;
@@ -27,4 +28,14 @@
   color: black;
   border: 2px solid red;
   padding: 20px;
+}
+.create-task{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-size: 50px;
+}
+
+.form-all{
+  margin-top: 200px;
 }
