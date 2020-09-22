@@ -4,12 +4,14 @@
 
 <%# タスク入力部分 %>
 <div class="create-task">
-  <h1>タスク作成</h1>
+  <h1>クエスト作成</h1>
   <div class="form-all">
     <%= form_with model: @task, local: true do |form| %>
-      <%= form.label :content, 'タスク' %>
+      <%= form.label :content, 'クエスト' %>
       <%= form.text_field :content %>
-      <%= form.submit "GO" %>
+          <div class="create-submit">
+            <%= form.submit "GO" %>
+          </div>
     <% end %>
   </div>
 </div>

@@ -9,6 +9,10 @@
   background-color: turquoise;
   width: 100%;
 }
+.main-text{
+  font-size: 30px;
+  padding-left: 20px;
+}
 
 .header-name a{
   margin-left: 50px;
@@ -29,13 +33,37 @@
   border: 2px solid red;
   padding: 20px;
 }
+
+.task{
+  list-style: none;
+  border: 2px solid purple;
+  width: 20%;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+
+.task a{
+  font-size: 50px;
+  text-decoration: none;
+  color: black;
+}
+
 .create-task{
   display: flex;
   align-items: center;
   flex-direction: column;
+  justify-content: space-around;
   font-size: 50px;
 }
 
 .form-all{
-  margin-top: 200px;
+  margin-top: 150px;
+  margin-right: 100px;
 }
+
+.create-submit{
+  margin-top: 100px;
+  margin-left: 400px;
+}
+

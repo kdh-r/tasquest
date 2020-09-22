@@ -1,6 +1,6 @@
 class TasksController < ApplicationController
   def index
-    @tasks = Task.all
+    @tasks = Task.includes(:user)
   end
 
   def new
@@ -8,9 +8,21 @@ class TasksController < ApplicationController
   end
 
   def create
+    @task = Task.new(task_params)
+    if @task.save
+      redirect_to root_path
+    end
+  end
+
+  def edit
+    @task = Task.find(params[:id])
   end
 
 
+end
 
+private
 
+def task_params
+  params.require(:task).permit(:content).merge(user_id: current_user.id)
 end
