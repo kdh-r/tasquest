@@ -18,6 +18,12 @@ RSpec.describe User, type: :model do
         @user.valid?
         expect(@user.errors.full_messages).to include("Name can't be blank")
       end
+
+      it 'ユーザー名が5文字以上だと登録できない' do
+        @user.name = "aaaaaa"
+        @user.valid?
+        expect(@user.errors.full_messages).to include("Name is too long (maximum is 5 characters)")
+      end
       
       it 'emailが空だと登録できない' do
         @user.email = nil
