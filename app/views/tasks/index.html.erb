@@ -1,12 +1,14 @@
 <div class="wrapper">
-   <%= render "header_ber"%>
+  <%= render "header_ber"%>
    <div class="main-text">
      <h1>タスク一覧</h1>
    </div>
      
-      <% @tasks.each do |task| %>
+     <% if current_user.id == @task.user_id %>
+       <% @tasks.each do |task| %>
         <li class="task"><%= link_to task.content, edit_task_path(task.id), method: :get %></li>
-      <% end %>
+       <% end %>
+     <% end %>
 </div>
 
  

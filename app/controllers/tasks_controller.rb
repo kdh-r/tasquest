@@ -1,6 +1,8 @@
 class TasksController < ApplicationController
+  before_action :set_task, only: [:edit, :destroy]
+
   def index
-    @tasks = Task.includes(:user)
+    @tasks = Task.all
   end
 
   def new
@@ -15,11 +17,11 @@ class TasksController < ApplicationController
   end
 
   def edit
-    @task = Task.find(params[:id])
+    
   end
 
   def destroy
-    @task = Task.find(params[:id])
+    
     @task.destroy
     redirect_to root_path
   end
@@ -30,4 +32,8 @@ private
 
 def task_params
   params.require(:task).permit(:content).merge(user_id: current_user.id)
+end
+
+def set_task
+  @task = Task.find(params[:id])
 end
