@@ -13,6 +13,8 @@ class TasksController < ApplicationController
     @task = Task.new(task_params)
     if @task.save
       redirect_to root_path
+    else
+      render 'new'
     end
   end
 

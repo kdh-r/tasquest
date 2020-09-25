@@ -5,13 +5,14 @@
 <%# タスク入力部分 %>
 <div class="create-task">
   <h1>クエスト作成</h1>
-  <div class="form-all">
+  <ul class="new-task">
     <%= form_with model: @task, local: true do |form| %>
-      <%= form.label :content, 'クエスト' %>
+      <li><%= form.label :content, 'クエスト' %></li>
       <%= form.text_field :content %>
-          <div class="create-submit">
-            <%= form.submit "GO" %>
-          </div>
+      <% if @task.errors.any? %>
+        <%= @task.errors.messages[:content][0]%>
+      <% end %>
+        <li class="submit"><%= form.submit "GO" %></li>
     <% end %>
-  </div>
+  </ul>
 </div>
