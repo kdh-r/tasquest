@@ -1,8 +1,11 @@
 class TasksController < ApplicationController
+  before_action :authenticate_user!, only: [:new]
   before_action :set_task, only: [:edit, :destroy]
 
   def index
+    if user_signed_in? 
     @tasks = current_user.tasks
+    end
   end
 
   def new
