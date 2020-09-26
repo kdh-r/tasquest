@@ -1,8 +1,11 @@
 class TasksController < ApplicationController
+  before_action :authenticate_user!, only: [:new]
   before_action :set_task, only: [:edit, :destroy]
 
   def index
-    @tasks = Task.all
+    if user_signed_in? 
+    @tasks = current_user.tasks
+    end
   end
 
   def new
@@ -13,6 +16,8 @@ class TasksController < ApplicationController
     @task = Task.new(task_params)
     if @task.save
       redirect_to root_path
+    else
+      render 'new'
     end
   end
 
