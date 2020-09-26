@@ -2,7 +2,7 @@ class TasksController < ApplicationController
   before_action :set_task, only: [:edit, :destroy]
 
   def index
-    @tasks = Task.all
+    @tasks = current_user.tasks
   end
 
   def new
