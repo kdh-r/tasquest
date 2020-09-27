@@ -1,5 +1,6 @@
 # タスク管理ツール
 
+
 ## users テーブル
 
 | Column   | Type   | Options     |
@@ -23,3 +24,9 @@
 ## Association
 
 - belongs_to :user
+
+# 機能一覧
+
+- ユーザー登録機能、ログイン機能（devise)
+- タスク投稿機能
+- レベルアップ機能
