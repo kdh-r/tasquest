@@ -9,7 +9,6 @@
 | email        | string     | null: false             |
 | password     | string     | null: false             |
 | player_level | integer    | null: false, default: 1 |
-| exp          | integer    | null: false, default: 0 |
 | level_id     | references | foreign_key: true       |
 
 ## Association
