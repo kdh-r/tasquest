@@ -36,7 +36,7 @@ end
 private
 
 def task_params
-  params.require(:task).permit(:content).merge(user_id: current_user.id)
+  params.require(:task).permit(:content, :point).merge(user_id: current_user.id)
 end
 
 def set_task
