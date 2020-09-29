@@ -122,25 +122,29 @@ a {
   background-size: cover;
 }
 
-.create-submit{
-  margin-top: 100px;
-  margin-left: 400px;
-}
-
 ul.new-task li{
-  padding-top: 100px;
-  padding-bottom: 100px;
-  padding-left: 160px;
+  padding-top: 10px;
+  padding-bottom: 30px;
   color: white;
 }
 
 ul li.submit{
-  margin-left: 50px;
+  margin-left: 220px;
+}
+
+.text{
+  padding-left: 170px;
 }
 .new-quest{
   padding-right: 60px;
   color: white;
 }
+
+.form-point{
+  width: 20%;
+  height: 50px;
+}
+
 
 /* editページ */
 .task-edit{
