@@ -4,11 +4,12 @@
 
 <%# タスク入力部分 %>
 <div class="create-task">
-  <h1>クエスト作成</h1>
+  <h1 class="new-quest">クエスト作成</h1>
   <ul class="new-task">
     <%= form_with model: @task, local: true do |form| %>
       <li><%= form.label :content, 'クエスト' %></li>
       <%= form.text_field :content %>
+      
       <% if @task.errors.any? %>
         <%= @task.errors.messages[:content][0]%>
       <% end %>

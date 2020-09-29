@@ -1,13 +1,47 @@
 <div class="wrapper">
-  <%= render "header_ber"%>
-   <div class="main-text">
-     <h1>タスク一覧</h1>
-   </div>
-    <% if user_signed_in? %>
-    <% @tasks.each do |task| %>
-     <li class="task"><%= link_to task.content, edit_task_path(task.id), method: :get %></li>
-   <% end %>
-   <% end %>
-</div>
+  <div class="side-ber">
+     <div class="header-name">
+         <% if user_signed_in? %>
+         <%= link_to current_user.name, "#" %>
+         <% else %>
+         <%= link_to "---", "#" %>
+         <% end %>
+         <%= link_to "リストを作成", new_task_path, class: "nav-link listNew" %>
+     </div>
+     <div class="left-main">
+         <h1>タスク一覧</h1>
+         <% if user_signed_in? %>
+         <% @tasks.each do |task| %>
+         <%= link_to edit_task_path(task.id) do%>
+          <div class="task">
+             <span class='task-btn'><%= task.content %></span>
+          </div>
+          <% end %>
+         <% end %>
+         <% end %>
+      </div>
+  </div>
 
+  <div class="right-ber">
+     <div class="header-right">
+       <div class="header_title">
+        <%= link_to "+asquest", root_path, class: "title-link" %>
+       </div>
+     <div class="links">
+        <% unless user_signed_in? %>
+        <%= link_to "新規登録/ログイン",new_user_session_path %>
+        <% end %>
+        <%= link_to "ログアウト", destroy_user_session_path, class: "nav-link" %>
+     </div>
+  </div>
+  <div class="right-main">
+     
+  </div>
+     
+  
+  
+
+
+  
+  
  
