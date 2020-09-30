@@ -18,6 +18,12 @@ RSpec.describe Task, type: :model do
         @task.valid?
         expect(@task.errors.full_messages).to include("Content can't be blank")
       end
+      
+      it 'タスクが11文字以上だと登録できない' do
+        @task.content = "あああああああああああ"
+        @task.valid?
+        expect(@task.errors.full_messages).to include("Content is too long (maximum is 10 characters)")
+      end
     end
   end
 end

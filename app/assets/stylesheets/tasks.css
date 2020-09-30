@@ -51,12 +51,14 @@
   width: 50%;
   height: calc(100vh - 100px);
   margin-left: auto;
-
 }
 
 .player-name{
   color: white;
-  font-size: 40px;
+  font-size: 50px;
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid white;
 }
 
 .header{
@@ -85,7 +87,7 @@ h1 {
   text-decoration: none;
   font-size: 40px;
   color: azure;
-  margin-left: 100px;
+  margin-left: 120px;
 }
 
 .links a{
