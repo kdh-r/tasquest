@@ -11,7 +11,7 @@
       <li class="text">クエスト</li>
       <h1 class="second-quest">優先度を1〜3で入力してください</h1>
       <%# <li><%= form.text_field :point, class: "form-point", placeholder:"1〜3" %></li> %>
-      <%= form.collection_select(:point_id, Point.all, :id, :name, {}, {class:"select-box", id:"task-point"}) %>
+      <%= form.collection_select(:point_id, Point.all, :id, :name, {}, {class:"select-box", id:"task_point"}) %>
       <li><%= form.text_field :content, placeholder:"task" %></li>
       
       <% if @task.errors.any? %>

@@ -24,12 +24,6 @@
   overflow: scroll;
 }
 
-/* .wrapper-bottom{
-  height: calc(100vh - 100px);
-  background-image: url(/assets/dora.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-} */
 .right-ber{
   height: 100vh;
   width: calc(100vw - 600px);
@@ -53,6 +47,17 @@
   background-size: cover;
 }
 
+.main{
+  width: 50%;
+  height: calc(100vh - 100px);
+  margin-left: auto;
+
+}
+
+.player-name{
+  color: white;
+  font-size: 40px;
+}
 
 .header{
   display: flex;
@@ -92,17 +97,25 @@ h1 {
 }
 /* 一覧のタスク */
 .task{
-  border: 3px solid yellow;
+  border: 3px solid crimson;
   background-color:rgb(0, 132, 255);
   width: 70%;
   margin-top: 20px;
   margin-left: 20px;
   border-radius: 25px;
+  display: flex;
+
 }
 
 .task-btn{
   font-size: 30px;
   color:white;  
+}
+
+.task-point{
+  font-size: 30px;
+  color:white;
+  margin-left: 20px;
 }
 
 a {
@@ -177,8 +190,9 @@ li.content{
 }
 
 .content{
-  border: 2px solid yellow;
+  border: 2px solid crimson;
   background-color: rgb(0, 132, 255);
   border-radius: 25px;
   font-size: 30px;
 }
+
