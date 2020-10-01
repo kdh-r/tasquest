@@ -3,8 +3,10 @@ class TasksController < ApplicationController
   before_action :set_task, only: [:edit, :destroy]
 
   def index
-    if user_signed_in? 
-    @tasks = current_user.tasks
+    unless 
+      if user_signed_in? 
+      @tasks = current_user.tasks    
+      end
     end
   end
 
@@ -23,6 +25,7 @@ class TasksController < ApplicationController
 
   def edit
   end
+  
 
   def destroy
     @task.destroy
@@ -41,3 +44,6 @@ def set_task
   @task = Task.find(params[:id])
 end
 
+
+
+    
