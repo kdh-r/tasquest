@@ -4,13 +4,13 @@
 }
 
 .side-ber{
-  width: 600px;
+  width: 500px;
   height: 100vh;
 }
 
 .header-name{
   height: 100px;
-  width: 600px;
+  width: 500px;
   display: flex;
   align-items: center;
   background-color:turquoise;
@@ -18,26 +18,20 @@
 
 .left-main{
   height: calc(100vh - 100px);
-  width: 600px;
+  width: 500px;
   margin-right: auto;
   background-color: black;
   overflow: scroll;
 }
 
-/* .wrapper-bottom{
-  height: calc(100vh - 100px);
-  background-image: url(/assets/dora.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-} */
 .right-ber{
   height: 100vh;
-  width: calc(100vw - 600px);
+  width: calc(100vw - 500px);
 }
 
 .header-right{
   height: 100px;
-  width: calc(100vw - 600px);
+  width: calc(100vw - 500px);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -45,7 +39,7 @@
 }
 
 .right-main{
-  width: calc(100vw - 600px);
+  width: calc(100vw - 500px);
   height: calc(100vh - 100px);
   margin-left: auto;
   background-image: url(/assets/dora.jpg);
@@ -53,6 +47,28 @@
   background-size: cover;
 }
 
+.main{
+  width: 50%;
+  height: calc(100vh - 100px);
+  margin-left: auto;
+}
+
+.player-name{
+  color: white;
+  font-size: 80px;
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid white;
+}
+
+.point{
+  color: white;
+  font-size: 40px;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+  border-bottom: 1px solid white;
+}
 
 .header{
   display: flex;
@@ -80,7 +96,7 @@ h1 {
   text-decoration: none;
   font-size: 40px;
   color: azure;
-  margin-left: 100px;
+  margin-left: 220px;
 }
 
 .links a{
@@ -92,17 +108,25 @@ h1 {
 }
 /* 一覧のタスク */
 .task{
-  border: 3px solid yellow;
+  border: 3px solid crimson;
   background-color:rgb(0, 132, 255);
   width: 70%;
   margin-top: 20px;
   margin-left: 20px;
   border-radius: 25px;
+  display: flex;
+
 }
 
 .task-btn{
   font-size: 30px;
   color:white;  
+}
+
+.task-point{
+  font-size: 30px;
+  color:white;
+  margin-left: 20px;
 }
 
 a {
@@ -122,25 +146,29 @@ a {
   background-size: cover;
 }
 
-.create-submit{
-  margin-top: 100px;
-  margin-left: 400px;
-}
-
 ul.new-task li{
-  padding-top: 100px;
-  padding-bottom: 100px;
-  padding-left: 160px;
+  padding-top: 10px;
+  padding-bottom: 30px;
   color: white;
 }
 
 ul li.submit{
-  margin-left: 50px;
+  margin-left: 220px;
+}
+
+.text{
+  padding-left: 170px;
 }
 .new-quest{
   padding-right: 60px;
   color: white;
 }
+
+.form-point{
+  width: 20%;
+  height: 50px;
+}
+
 
 /* editページ */
 .task-edit{
@@ -173,8 +201,9 @@ li.content{
 }
 
 .content{
-  border: 2px solid yellow;
+  border: 2px solid crimson;
   background-color: rgb(0, 132, 255);
   border-radius: 25px;
   font-size: 30px;
 }
+

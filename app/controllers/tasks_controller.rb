@@ -3,8 +3,10 @@ class TasksController < ApplicationController
   before_action :set_task, only: [:edit, :destroy]
 
   def index
-    if user_signed_in? 
-    @tasks = current_user.tasks
+    unless 
+      if user_signed_in? 
+      @tasks = current_user.tasks    
+      end
     end
   end
 
@@ -22,11 +24,10 @@ class TasksController < ApplicationController
   end
 
   def edit
-    
   end
+  
 
   def destroy
-    
     @task.destroy
     redirect_to root_path
   end
@@ -36,9 +37,13 @@ end
 private
 
 def task_params
-  params.require(:task).permit(:content, :point).merge(user_id: current_user.id)
+  params.require(:task).permit(:content, :point_id).merge(user_id: current_user.id)
 end
 
 def set_task
   @task = Task.find(params[:id])
 end
+
+
+
+    
