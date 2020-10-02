@@ -3,14 +3,14 @@
  
     
     <%# タスクの概要 %>
-  <div class="task-edit">
+  <div class="edit">
     <ul class="edit-list">
       <li>クエスト内容</li> 
       <li class="content">
         <%= @task.content %><%= @task.point_id%>
       </li>
       <% if @task.user_id == current_user.id %>
-        <div class="task-destroy" id = "form">
+        <div class="destroy" id = "form">
           <%= link_to 'クエスト完了', task_path(@task.id), method: :delete %>
         </div>
       <% end %>

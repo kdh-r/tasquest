@@ -5,7 +5,7 @@ class TasksController < ApplicationController
   def index
     unless 
       if user_signed_in? 
-      @tasks = current_user.tasks    
+      @tasks = current_user.tasks.order(id: "DESC")   
       end
     end
   end
@@ -13,6 +13,21 @@ class TasksController < ApplicationController
   def new
     @task = Task.new
   end
+
+
+  def show
+    
+    task = Task.find(params[:id])
+    if task.finished_at then
+      task.update(finished_at: false)
+    else
+      task.update(finished_at: true)
+    end
+
+    item = Task.find(params[:id])
+    render json: { task: item }
+  end
+
 
   def create
     @task = Task.new(task_params)
@@ -31,6 +46,24 @@ class TasksController < ApplicationController
     @task.destroy
     redirect_to root_path
   end
+
+  def finished
+    
+    task = Task.find(params[id])
+    user = User.find(task.user_id)
+
+    total_exp = user.exp
+    total_exp = total_exp + task.point_id
+    user.exp = total_exp
+    
+    user.update(exp: total_exp)
+
+    if level.threshold <= user.exp
+    user.level = user.level + 1
+    user.update(level: user.level)
+    end
+  end
+
 
 end
 
