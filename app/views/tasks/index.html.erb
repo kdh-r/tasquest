@@ -48,15 +48,13 @@
        
          <div class="point"><% if user_signed_in? %>
          <h2>total exp:</h2>
-         <%= current_user.exp %>
+         <%= current_user.tasks.sum("point_id") %>
          <% end %>
          </div>
      <div> 
   </div>
 </div>
   
-
-
   
   
  

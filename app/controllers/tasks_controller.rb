@@ -16,7 +16,6 @@ class TasksController < ApplicationController
 
 
   def show
-    
     task = Task.find(params[:id])
     if task.finished_at then
       task.update(finished_at: false)
@@ -47,31 +46,15 @@ class TasksController < ApplicationController
     redirect_to root_path
   end
 
-  def finished
-    
-    task = Task.find(params[id])
-    user = User.find(task.user_id)
-
-    total_exp = user.exp
-    total_exp = total_exp + task.point_id
-    user.exp = total_exp
-    
-    user.update(exp: total_exp)
-
-    if level.threshold <= user.exp
-    user.level = user.level + 1
-    user.update(level: user.level)
-    end
-  end
-
-
+ 
 end
 
-private
 
+private
 def task_params
   params.require(:task).permit(:content, :point_id).merge(user_id: current_user.id)
 end
+
 
 def set_task
   @task = Task.find(params[:id])
