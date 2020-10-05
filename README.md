@@ -9,21 +9,21 @@
 | email        | string     | null: false             |
 | password     | string     | null: false             |
 | player_level | integer    | null: false, default: 1 |
-| level_id     | references | foreign_key: true       |
+
 
 ## Association
 
 - has_many :tasks
-- belongs_to :level
+
 
 
 ## tasks テーブル
 
-| Column  | Type       | Options                        |
-| ------- | ---------- | ------------------------------ |
-| content | string     | null: false                    |
-| user_id | references | foreign_key: true              |
-| point   | integer    | null: false, default: 1        |
+| Column     | Type       | Options                        |
+| -----------| ---------- | ------------------------------ |
+| content    | string     | null: false                    |
+| user_id    | references | foreign_key: true              |
+| point_id   | integer    | null: false, default: 1        |
 
 ## Association
 
@@ -39,7 +39,7 @@
 
 ## Association 
 
-- has_many :users
+
 
 
 # 機能一覧

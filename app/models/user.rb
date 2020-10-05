@@ -6,6 +6,7 @@ class User < ApplicationRecord
          
   has_many :tasks
 
+
   validates :name, :email, :password, presence: true
   validates :name, length: { maximum: 6 }
   validates :password, format: { with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]{6,100}\z/i}

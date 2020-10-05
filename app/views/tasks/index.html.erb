@@ -6,22 +6,22 @@
          <% else %>
          <%= link_to "---", "#" %>
          <% end %>
-         <%= link_to "リストを作成", new_task_path, class: "nav-link listNew" %>
+         <%= link_to "タスクを作成", new_task_path, class: "nav-link listNew" %>
      </div>
 
-     <div class="left-main">
-         <h1>クエスト一覧</h1>
-         <% if user_signed_in? %>
-         <% @tasks.each do |task| %>
-         <%= link_to edit_task_path(task.id) do%>
-          <div class="task">
-             <span class='task-btn'><%= task.content %></span>
-             <%# <span class='task-point'><%= task.point_id %></span> %>
-          </div>
-          <% end %>
-         <% end %>
-         <% end %>
-      </div>
+    <div class="left-main">
+       <h1>クエスト一覧</h1>
+           <% if user_signed_in? %>
+             <%= @tasks.each do |task| %>
+                  <%= link_to edit_task_path(task.id) do %>
+                     <div class="task" >
+                     <span class='task-btn'><%= task.content %></span>
+                     <%# <span class='task-point'><%= task.point_id %></span> %>
+                     </div>
+                  <% end%>   
+             <% end %>
+           <% end %>  
+    </div>
   </div>
 
   <div class="right-ber">
@@ -38,28 +38,23 @@
   </div>
   
   <div class="right-main">
-    <div class="main">
-      <div class="player-name">
-      <% if user_signed_in? %>
-      <%= current_user.name %>
-      <h2>level:</h2>
-      <%= current_user.player_level %>
-      <% end %>
-      </div>
-      <div class="point">
-      <% if user_signed_in? %>
-      <h2>total exp:</h2>
-      <%= current_user.tasks.sum("point_id") %>
-      <% end %>
-      </div>
-    <div>
-     
+     <div class="main"> 
+         <% if user_signed_in? %>
+         <div class="player-name"><%= current_user.name %>
+         <h2>level:</h2>
+         <%= current_user.player_level %>
+         <% end %>
+         </div>
+       
+         <div class="point"><% if user_signed_in? %>
+         <h2>total exp:</h2>
+         <%= current_user.tasks.sum("point_id") %>
+         <% end %>
+         </div>
+     <div> 
   </div>
-     
+</div>
   
-  
-
-
   
   
  
