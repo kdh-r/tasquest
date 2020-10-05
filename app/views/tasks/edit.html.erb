@@ -3,17 +3,21 @@
  
     
     <%# タスクの概要 %>
+ 
   <div class="edit">
-    <ul class="edit-list">
-      <li>クエスト内容</li> 
-      <li class="content">
-        <%= @task.content %><%= @task.point_id%>
-      </li>
-      <% if @task.user_id == current_user.id %>
-        <div class="destroy" id = "form">
-          <%= link_to 'クエスト完了', task_path(@task.id), method: :delete %>
-        </div>
-      <% end %>
-    </ul>
+    <div class="edit-list">
+      <ul class="content">
+        <li class="edit-title">クエスト内容</li> 
+         <li class="task-content"><%= @task.content %></li>
+         <%= form_with(model: @task, local: true) do |form| %>
+         <%= form.collection_select(:point_id, Point.all, :id, :name, {}, {class:"select-box", id:"task_point"}) %>
+         <h1 class="second-quest">達成度を1〜3で入力してください</h1>
+          <%# <li class="edit-form"><%= form.text_field :point_id, placeholder: "point" %></li> %>
+          <% if @task.user_id == current_user.id %>
+          <li class="edit-btn"><%= form.submit "クエスト完了" %></li>
+          <% end %>
+        <% end %>
+      </ul>
+    </div>
   </div>
 </div>
