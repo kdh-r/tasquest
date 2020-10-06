@@ -10,8 +10,15 @@ RSpec.describe Task, type: :model do
       it '文字が入力されていれば登録できる' do
         expect(@task).to be_valid
       end
+
+      it 'point_idが空でも登録できる' do
+      @task.point_id = nil
+      expect(@task).to be_valid
+      end
     end
 
+
+    
     context 'タスク登録がうまくいかないとき' do
       it '文字が入力されていないと登録できない' do
         @task.content = nil

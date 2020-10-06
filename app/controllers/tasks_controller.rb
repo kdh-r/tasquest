@@ -14,17 +14,17 @@ class TasksController < ApplicationController
   end
 
 
-  def show
-    task = Task.find(params[:id])
-    if task.finished_at then
-      task.update(finished_at: false)
-    else
-      task.update(finished_at: true)
-    end
+  # def show
+  #   task = Task.find(params[:id])
+  #   if task.finished_at then
+  #     task.update(finished_at: false)
+  #   else
+  #     task.update(finished_at: true)
+  #   end
 
-    item = Task.find(params[:id])
-    render json: { task: item }
-  end
+  #   item = Task.find(params[:id])
+  #   render json: { task: item }
+  # end
 
 
   def create
@@ -40,25 +40,19 @@ class TasksController < ApplicationController
   end
   
 
-  # def destroy
-  #   @task.destroy
-  #   redirect_to root_path
-  # end
-
   def update
     @task = Task.find(params[:id])
     if @task.update(task_params)
-      redirect_to root_path
+       redirect_to root_path
     end
-    @user = User.find(params[id])
-    level = Level.find_by(number: user.player_level + 1)
-    if level.threshold <= current_user.task.sum("point_id")
-      # user.player_level += 1
-      # UPDATE users SET current_user.player_level +  1  WHERE current_user.id;
-      @user.update(player_level: user.player_level)
-      @user.save
-    end
-
+    # user = User.find(params[:id])
+    # level = Level.find_by(number: user.player_level + 1)
+    # if level.threshold <= current_user.task.sum("point_id")
+    #   # user.player_level += 1
+    #   # UPDATE users SET current_user.player_level +  1  WHERE current_user.id;
+    #   user.update(player_level: user.player_level)
+    #   user.save
+    # end
   end
  
 end
@@ -69,9 +63,9 @@ def task_params
   params.require(:task).permit(:content, :point_id).merge(user_id: current_user.id)
 end
 
-def user_params
-  params.require(:user).permit(:name, :email, :password, :player_level)
-end
+# def user_params
+#   params.require(:user).permit(:name, :email, :password, :player_level)
+# end
 
 def set_task
   @task = Task.find(params[:id])

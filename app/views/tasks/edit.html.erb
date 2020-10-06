@@ -12,7 +12,6 @@
          <%= form_with(model: @task, local: true) do |form| %>
          <%= form.collection_select(:point_id, Point.all, :id, :name, {}, {class:"select-box", id:"task_point"}) %>
          <h1 class="second-quest">達成度を1〜3で入力してください</h1>
-          <%# <li class="edit-form"><%= form.text_field :point_id, placeholder: "point" %></li> %>
           <% if @task.user_id == current_user.id %>
           <li class="edit-btn"><%= form.submit "クエスト完了" %></li>
           <% end %>

@@ -1,11 +1,9 @@
 html{
-  /* background-image: url(/assets/uni.jpg);
+  background-image: url(/assets/uni.jpg);
   background-repeat: no-repeat;
-  background-size: cover; */
+  background-size: cover;
 }
   
-
-
 .account-page__inner {
   width: 980px;
   margin: 60px auto;
