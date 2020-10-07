@@ -120,9 +120,10 @@ a:hover {
 }
 
 h1 {
-  font-size: 30px;
+  font-size: 40px;
   padding-left: 20px;
   color: crimson;
+  text-align: center;
 }
 
 
