@@ -14,19 +14,6 @@ class TasksController < ApplicationController
   end
 
 
-  # def show
-  #   task = Task.find(params[:id])
-  #   if task.finished_at then
-  #     task.update(finished_at: false)
-  #   else
-  #     task.update(finished_at: true)
-  #   end
-
-  #   item = Task.find(params[:id])
-  #   render json: { task: item }
-  # end
-
-
   def create
     @task = Task.new(task_params)
     if @task.save
