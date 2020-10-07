@@ -5,13 +5,12 @@
       <title>Tasquest</title>
       <%= csrf_meta_tags %>
       <%= csp_meta_tag %>
-      <%# <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css"> %>
+      <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
       <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
       <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
       <link href="//fonts.googleapis.com/css?family=Alegreya+Sans+SC:300" rel="stylesheet">
       <link href="//fonts.googleapis.com/css?family=M+PLUS+Rounded+1c" rel="stylesheet">
     </head>
-
     <body>
     <%= yield %>
     </body>
