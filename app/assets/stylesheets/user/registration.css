@@ -1,17 +1,26 @@
+
 html{
-  background-image: url(/assets/uni.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color:black;
 }
-  
+.footer{
+  text-align: center;
+  font-size: 100px;
+  color:crimson;
+  font-family: 'Alegreya Sans SC', sans-serif;
+}
+
 .account-page__inner {
   width: 980px;
   margin: 60px auto;
   padding: 60px;
   /* background-color: gray; */
-  border: 3px solid white;
+  border: 3px solid yellow;
   border-radius: 5px;
   color: white;
+  background-image: url(/assets/uni.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius : 30px 0;
 }
 
 account-page .account-page__inner .account-page__inner--left, .account-page .account-page__inner .account-page__inner--right {
@@ -41,6 +50,7 @@ account-page .account-page__inner .account-page__inner--left, .account-page .acc
   margin-bottom: 20px;
   font-size: 20px;
   font-weight: 200;
+  font-family: "M PLUS Rounded 1c";
 }
 .account-page .account-page__header .btn {
   margin-top: 20px;

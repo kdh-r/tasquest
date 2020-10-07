@@ -1,42 +1,19 @@
+ <%= render "second_header" %>
+
 <div class="wrapper">
-  <div class="side-ber">
-     <div class="header-name">
-         <% if user_signed_in? %>
-         <%= link_to current_user.name, "#" %>
-         <% else %>
-         <%= link_to "---", "#" %>
+  <div class="left-main">
+    <h1>クエスト一覧</h1>
+     <% if user_signed_in? %>
+         <%= @tasks.each do |task| %>
+            <%= link_to edit_task_path(task.id) do %>
+               <div class="task" >
+                 <span class='task-btn'><%= task.content %></span>
+               </div>
+            <% end%>   
          <% end %>
-         <%= link_to "タスクを作成", new_task_path, class: "nav-link listNew" %>
-     </div>
-
-    <div class="left-main">
-       <h1>クエスト一覧</h1>
-           <% if user_signed_in? %>
-             <%= @tasks.each do |task| %>
-                  <%= link_to edit_task_path(task.id) do %>
-                     <div class="task" >
-                     <span class='task-btn'><%= task.content %></span>
-                     <%# <span class='task-point'><%= task.point_id %></span> %>
-                     </div>
-                  <% end%>   
-             <% end %>
-           <% end %>  
-    </div>
+     <% end %>  
   </div>
 
-  <div class="right-ber">
-     <div class="header-right">
-       <div class="header_title">
-        <%= link_to "+asquest", root_path, class: "title-link" %>
-       </div>
-     <div class="links">
-        <% unless user_signed_in? %>
-        <%= link_to "新規登録/ログイン",new_user_session_path %>
-        <% end %>
-        <%= link_to "ログアウト", destroy_user_session_path, class: "nav-link" %>
-     </div>
-  </div>
-  
   <div class="right-main">
      <div class="main"> 
          <% if user_signed_in? %>
@@ -51,10 +28,9 @@
          <%= current_user.tasks.sum("point_id") %>
          <% end %>
          </div>
+         <div class="exp-text">
+         <h2>次のレベルまであと</h2>
+         </div>
      <div> 
-  </div>
+  </div>        
 </div>
-  
-  
-  
- 
