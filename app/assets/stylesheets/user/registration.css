@@ -5,7 +5,8 @@ html{
 .footer{
   text-align: center;
   font-size: 100px;
-  color:red;
+  color:crimson;
+  font-family: 'Alegreya Sans SC', sans-serif;
 }
 
 .account-page__inner {
@@ -49,6 +50,7 @@ account-page .account-page__inner .account-page__inner--left, .account-page .acc
   margin-bottom: 20px;
   font-size: 20px;
   font-weight: 200;
+  font-family: "M PLUS Rounded 1c";
 }
 .account-page .account-page__header .btn {
   margin-top: 20px;
