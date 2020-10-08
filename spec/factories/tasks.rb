@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :task do
-    content {"シャンプー"}
+    content { 'シャンプー' }
     association :user
   end
 end

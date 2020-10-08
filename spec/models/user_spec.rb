@@ -1,13 +1,13 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-   before do
-     @user = FactoryBot.build(:user)
-   end
+  before do
+    @user = FactoryBot.build(:user)
+  end
 
-   describe 'ユーザー登録' do
+  describe 'ユーザー登録' do
     context 'ユーザー登録がうまくいくとき' do
-      it '全て入力できていれば登録できる'do
+      it '全て入力できていれば登録できる' do
         expect(@user).to be_valid
       end
     end
@@ -20,11 +20,11 @@ RSpec.describe User, type: :model do
       end
 
       it 'ユーザー名が7文字以上だと登録できない' do
-        @user.name = "aaaaaaa"
+        @user.name = 'aaaaaaa'
         @user.valid?
-        expect(@user.errors.full_messages).to include("Name is too long (maximum is 6 characters)")
+        expect(@user.errors.full_messages).to include('Name is too long (maximum is 6 characters)')
       end
-      
+
       it 'emailが空だと登録できない' do
         @user.email = nil
         @user.valid?
@@ -35,9 +35,9 @@ RSpec.describe User, type: :model do
         @user.save
         another_user = FactoryBot.build(:user, email: @user.email)
         another_user.valid?
-        expect(another_user.errors.full_messages).to include("Email has already been taken")
+        expect(another_user.errors.full_messages).to include('Email has already been taken')
       end
-      
+
       it 'passwordがないと登録できない' do
         @user.password = nil
         @user.valid?
@@ -45,15 +45,15 @@ RSpec.describe User, type: :model do
       end
 
       it 'passwordは英数字混合でないと登録できない' do
-        @user.password = "111111"
+        @user.password = '111111'
         @user.valid?
-        expect(@user.errors.full_messages).to include("Password is invalid")
+        expect(@user.errors.full_messages).to include('Password is invalid')
       end
-      
+
       it 'passwordは6文字以上でないと登録できない' do
-        @user.password = "11aa"
+        @user.password = '11aa'
         @user.valid?
-        expect(@user.errors.full_messages).to include("Password is invalid")
+        expect(@user.errors.full_messages).to include('Password is invalid')
       end
     end
   end

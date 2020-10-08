@@ -5,14 +5,12 @@
 <%# タスク入力部分 %>
 <div class="create-task">
   <h1 class="new-quest">クエスト作成</h1>
-  <% if @task.errors.any? %>
-    <%= @task.errors.messages[:content][0]%>
-  <% end %>
   <ul class="new-task">
-    <%= form_with model: @task, local: true do |form| %>
+    <%= form_with model: @task, local: true do |f| %>
+    <%= render "shared/error_tasks", model: f.object %>
       <li class="text">クエスト</li>
-      <li><%= form.text_field :content, placeholder:"task" %></li>
-        <li class="submit"><%= form.submit "GO" %></li>
+      <li><%= f.text_field :content, placeholder:"task" %></li>
+        <li class="submit"><%= f.submit "GO" %></li>
     <% end %>
   </ul>
 </div>

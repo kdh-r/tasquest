@@ -12,24 +12,22 @@ RSpec.describe Task, type: :model do
       end
 
       it 'point_idが空でも登録できる' do
-      @task.point_id = nil
-      expect(@task).to be_valid
+        @task.point_id = nil
+        expect(@task).to be_valid
       end
     end
 
-
-    
     context 'タスク登録がうまくいかないとき' do
       it '文字が入力されていないと登録できない' do
         @task.content = nil
         @task.valid?
         expect(@task.errors.full_messages).to include("Content can't be blank")
       end
-      
+
       it 'タスクが11文字以上だと登録できない' do
-        @task.content = "あああああああああああ"
+        @task.content = 'あああああああああああ'
         @task.valid?
-        expect(@task.errors.full_messages).to include("Content is too long (maximum is 10 characters)")
+        expect(@task.errors.full_messages).to include('Content is too long (maximum is 10 characters)')
       end
     end
   end
