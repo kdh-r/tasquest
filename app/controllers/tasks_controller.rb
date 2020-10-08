@@ -6,8 +6,10 @@ class TasksController < ApplicationController
     if user_signed_in?
       @tasks = current_user.tasks.where(point_id: nil)
       @user = current_user
-      @level = Level.find_by(number: @user.player_level + 1)
+      @level = Level.find_by(number: @user.player_level + 1) 
       @nextlevel = @level.threshold - current_user.exp
+    else
+      return
     end
       
   end
