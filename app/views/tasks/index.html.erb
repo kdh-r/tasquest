@@ -26,9 +26,10 @@
           <div class="point"><% if user_signed_in? %>
              <h2>total exp:</h2>
              <%= @user.exp %>
+             <div class="next">次のレベルまであと<%= @nextlevel %></div>
              <% end %>
           </div>
-          <div class="next">次のレベルまであと<%= @nextlevel %></div>
+          <%# <div class="next">次のレベルまであと<%= @nextlevel %></div> %>
        <div>
     </div>
  </div>
