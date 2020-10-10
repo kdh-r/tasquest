@@ -6,14 +6,13 @@ class TasksController < ApplicationController
     if user_signed_in?
       @tasks = current_user.tasks.where(point_id: nil)
       @user = current_user
-      @level = Level.find_by(number: @user.player_level + 1) 
-      if @level.nil?
-      @nextlevel = 0
-      else 
-      @nextlevel = @level.threshold - current_user.exp
-      end
+      @level = Level.find_by(number: @user.player_level + 1)
+      @nextlevel = if @level.nil?
+                     0
+                   else
+                     @level.threshold - current_user.exp
+                   end
     end
-      
   end
 
   def new
@@ -34,28 +33,25 @@ class TasksController < ApplicationController
 
   def update
     @task = Task.find(params[:id])
-      # タスクのポイントを確定
-      @task.update(task_params)
+    # タスクのポイントを確定
+    @task.update(task_params)
 
-      # userを確定
-      @user = current_user
-      @level = Level.find_by(number: @user.player_level + 1)
-      # userの今の経験値が入る
-      @tmp_exp = @user.exp
-      # 今現在の経験値 + 今回の経験値
-      @total_exp = @tmp_exp + @task.point_id
-      # ユーザーのトータル経験値を保存
-      @user.update(exp: @total_exp)
-      # レベルアップ処理
-      if @level.threshold <= current_user.exp
-        @user.player_level += 1
-        @user.save
-      end
-      redirect_to root_path
-    
+    # userを確定
+    @user = current_user
+    @level = Level.find_by(number: @user.player_level + 1)
+    # userの今の経験値が入る
+    @tmp_exp = @user.exp
+    # 今現在の経験値 + 今回の経験値
+    @total_exp = @tmp_exp + @task.point_id
+    # ユーザーのトータル経験値を保存
+    @user.update(exp: @total_exp)
+    # レベルアップ処理
+    if @level.threshold <= current_user.exp
+      @user.player_level += 1
+      @user.save
+    end
+    redirect_to root_path
   end
-
-
 end
 
 private
