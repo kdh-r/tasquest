@@ -20,11 +20,7 @@
           <div class="player-name"><%= current_user.name %>
            <h2>level:</h2>
            <%= current_user.player_level %>
-          <% end %> 
           </div>
-
-
-          <% if user_signed_in? %>
             <div class="point">
                <h2>total exp:</h2>
                <%= @user.exp %>

@@ -272,6 +272,8 @@ ul li.edit-btn{
   border-radius: 1px;
 }
 
+
+/* タブレット表示 */
 @media (max-width: 1024px){
 
   .navbar{
@@ -319,11 +321,10 @@ ul li.edit-btn{
     width: 70%;
   }
   .next{
-    margin-top: 600px;
+    margin-top: 700px;
   }
   
   .right-main{
-    width: 85%;
     height: 100vh;
     margin-left: auto;
     background-image: url(/assets/dra.jpg);
@@ -378,5 +379,10 @@ ul li.edit-btn{
   margin-right: auto;
   border-right: 100px solid transparent;
   border-left: 100px solid transparent;
-}
   }
+}
+
+@media (max-width: 599px){
+
+
+}
