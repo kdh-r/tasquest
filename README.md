@@ -23,7 +23,7 @@
 # 使用技術
 
 <p text-align="center">
-<img src="(https://user-images.githubusercontent.com/69668590/95661785-09483500-0b6d-11eb-8dcb-fea9eb23011a.png" with="80px;" />
+<img src="https://user-images.githubusercontent.com/69668590/95661785-09483500-0b6d-11eb-8dcb-fea9eb23011a.png" with="80px;">
 </p>
 
 
