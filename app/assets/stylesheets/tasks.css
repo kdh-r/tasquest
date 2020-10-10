@@ -326,7 +326,7 @@ ul li.edit-btn{
     width: 85%;
     height: 100vh;
     margin-left: auto;
-    background-image: url(/assets/dora.jpg);
+    background-image: url(/assets/dra.jpg);
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -340,6 +340,16 @@ ul li.edit-btn{
     border-left: 30px solid transparent;
     font-family: "M PLUS Rounded 1c";
     text-align: center;
+  }
+
+  /* リストページ */
+  .new-quest{
+    font-size: 60px;
+    margin-left: 50px;
+  }
+  .new-task{
+    margin-left: 50px;
+    margin-bottom: 200px;
   }
   
   }
