@@ -18,17 +18,19 @@
        <div class="main">
           <% if user_signed_in? %>
           <div class="player-name"><%= current_user.name %>
-             <h2>level:</h2>
-             <%= current_user.player_level %>
-             <% end %>
+           <h2>level:</h2>
+           <%= current_user.player_level %>
+          <% end %> 
           </div>
 
-          <div class="point"><% if user_signed_in? %>
-             <h2>total exp:</h2>
-             <%= @user.exp %>
-             <% end %>
-          </div>
-          <div class="next">次のレベルまであと<%= @nextlevel %></div>
-       <div>
+
+          <% if user_signed_in? %>
+            <div class="point">
+               <h2>total exp:</h2>
+               <%= @user.exp %>
+            </div>
+            <div class="next">次のレベルまであと<%= @nextlevel %></div>
+          <% end %>
+       </div>
     </div>
  </div>
