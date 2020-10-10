@@ -270,34 +270,76 @@ ul li.edit-btn{
   background-color: firebrick;
   color: white;
   border-radius: 1px;
+}
+
+@media (max-width: 1024px){
+
+  .navbar{
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+    position: relative;
   }
-
-
-  @media (max-width: 1024px){
-
-    .wrapper{
-      width: 100%;
+  
+  .title{
+    position: absolute;
+    margin-left: 400px;
     }
-    
-    .navbar{
-      display: flex;
-      align-items: center;
-      margin-left: 30px;
-      position: relative;
-    }
-
-    .title{
-      position: absolute;
-      margin-left: 400px;
-     }
-
-     .title a{
-      font-size: 40px;
-      color: azure;
-      font-family: 'Alegreya Sans SC', sans-serif;
-    }
-    .rog{
-      display: flex;
-      margin-right: 20px;
-    }
+  
+  .title a{
+    font-size: 50px;
+    color: azure;
+    font-family: 'Alegreya Sans SC', sans-serif;
+  }
+  .rog a{
+    font-size: 10px;
+  }
+  
+  .list a{
+    font-size: 13px;
+  }
+  
+  .header-name a{
+    font-size: 20px;
+  }
+  /* メイン */
+  h1{
+    font-size: 30px;
+  }
+  
+  .task-btn{
+    font-size: 20px;
+  }
+  
+  .player-name{
+    margin-top: 100px;
+    font-size: 90px;
+  }
+  .main{
+    width: 70%;
+  }
+  .next{
+    margin-top: 600px;
+  }
+  
+  .right-main{
+    width: 85%;
+    height: 100vh;
+    margin-left: auto;
+    background-image: url(/assets/dora.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .task{
+    font-size: 30px;
+    border: 3px solid red;
+    margin-top: 50px;
+    width: 100%;
+    border-right: 30px solid transparent;
+    border-left: 30px solid transparent;
+    font-family: "M PLUS Rounded 1c";
+    text-align: center;
+  }
+  
   }
