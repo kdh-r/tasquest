@@ -61,5 +61,6 @@ gem 'devise'
 gem 'active_hash'
 gem 'pry-rails'
 group :production do
-  gem 'rails_12factor'
+  # gem 'rails_12factor'
+  gem 'unicorn', '5.4.1'
 end
