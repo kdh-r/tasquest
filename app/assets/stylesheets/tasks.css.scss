@@ -81,7 +81,7 @@ header{
   width: 70%;
   height: calc(100vh - 100px);
   margin-left: auto;
-  background-image: image-url("dora.jpg");
+  background-image: url(/public/images/dora.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -221,7 +221,7 @@ color: red;
   height: calc(100vh - 100px);
   display: flex;
   justify-content: space-around;
-  background-image: url(/assets/nik.jpg);
+  background-image: url(/public/images/nik.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
