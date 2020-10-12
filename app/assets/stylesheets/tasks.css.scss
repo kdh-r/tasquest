@@ -221,7 +221,7 @@ color: red;
   height: calc(100vh - 100px);
   display: flex;
   justify-content: space-around;
-  background-image: url(/assets/nik.jpg);
+  background-image: image-url("nik.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -327,7 +327,7 @@ ul li.edit-btn{
   .right-main{
     height: 100vh;
     margin-left: auto;
-    background-image: url(/assets/dra.jpg);
+    background-image: image-url("dra.jpg");
     background-repeat: no-repeat;
     background-size: cover;
   }
