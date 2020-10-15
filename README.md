@@ -17,7 +17,7 @@
 
 
 # トップページ
-![サンプル](https://user-images.githubusercontent.com/69668590/95661451-6a223e00-0b6a-11eb-9655-aa8f9199a4d3.jpg)
+![サンプル](https://user-images.githubusercontent.com/69668590/96103252-70ba0800-0f12-11eb-8196-88edd73de4f2.png)
 
 
 # 使用技術
