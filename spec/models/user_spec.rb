@@ -28,7 +28,7 @@ RSpec.describe User, type: :model do
       it 'ユーザー名が全角だと登録できない' do
         @user.name = 'あああ'
         @user.valid?
-        expect(@user.errors.full_messages).to include("Name is invalid")
+        expect(@user.errors.full_messages).to include('Name is invalid')
       end
 
       it 'emailが空だと登録できない' do
