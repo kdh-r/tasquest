@@ -25,6 +25,12 @@ RSpec.describe User, type: :model do
         expect(@user.errors.full_messages).to include('Name is too long (maximum is 6 characters)')
       end
 
+      it 'ユーザー名が全角だと登録できない' do
+        @user.name = 'あああ'
+        @user.valid?
+        expect(@user.errors.full_messages).to include("Name is invalid")
+      end
+
       it 'emailが空だと登録できない' do
         @user.email = nil
         @user.valid?
