@@ -11,7 +11,7 @@
     <div class="title" style="text-align: center;"><%= link_to "+asquest", root_path %></div>
     <div class="rog">
     <% unless user_signed_in? %>
-     <div class="new"><%= link_to "新規登録/ログイン",new_user_session_path %></div>
+     <div class="new"><%= link_to "新規登録/ログイン",new_user_session_path, class: "nav-link" %></div>
     <% end %>
     <div class="rog-out"><%= link_to "ログアウト", destroy_user_session_path, class: "nav-link" %></div>
   </div>

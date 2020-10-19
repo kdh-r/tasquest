@@ -51,16 +51,30 @@ header{
 .rog-out a{
   margin-left: 20px;
   color: black;
-  border: 2px solid red;
+  border: 2px solid black;
   padding: 10px 20px;
   font-family: "M PLUS Rounded 1c";
+  background-color: azure;
+  transition: all 0.3s;
+  font-weight: 600;
 }
 
 .new a{
   color: black;
-  border: 2px solid red;
+  border: 2px solid black;
   padding: 10px 20px;
   font-family: "M PLUS Rounded 1c";
+  background-color: azure;
+  transition: all 0.3s;
+  font-weight: 600;
+}
+
+a:hover {
+  color: crimson;
+}
+.nav-link:hover {
+  background-color: red;
+  color: white;
 }
 
 
@@ -84,10 +98,6 @@ header{
   background-image: image-url("dora.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-a:hover {
-  color: crimson;
 }
 
 .main{
@@ -148,7 +158,7 @@ h1 {
   border-left: 100px solid transparent;
   font-family: "M PLUS Rounded 1c";
   text-align: center;
-  
+  transition: all 0.4s ;
 }
 
 .task:hover{
