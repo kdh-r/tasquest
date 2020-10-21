@@ -98,6 +98,7 @@ a:hover {
   background-image: image-url("dora.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
 }
 
 .main{
@@ -142,11 +143,23 @@ h1 {
   color: white;
   font-size: 40px;
   text-align: center;
-  margin-top: 350px;
-  border-bottom: 1px solid white;
+  // padding-left: 200px;
+  // margin-top: 350px;
+  // border-bottom: 1px solid white;
   font-family: "M PLUS Rounded 1c";
 }
 
+.ran{
+  font-size: 40px;
+}
+
+.ranking{
+  position: absolute;
+  color: yellow;
+  padding-left: 300px;
+  font-size: 30px;
+  padding-top: 50px;
+}
 
 /* 一覧のタスク */
 .task{
@@ -158,11 +171,8 @@ h1 {
   border-left: 100px solid transparent;
   font-family: "M PLUS Rounded 1c";
   text-align: center;
-  transition: all 0.4s ;
-}
+  transition: all 0.5s ;
 
-.task:hover{
-  background-color: red;
 }
 
 .task-btn{
@@ -170,10 +180,9 @@ h1 {
   color:white;
 }
 
-.task-point{
-  font-size: 30px;
-  color:white;
-  margin-left: 20px;
+
+.task:hover{
+  background-color: red;
 }
 
 a {

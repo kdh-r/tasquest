@@ -12,7 +12,9 @@ class TasksController < ApplicationController
                    else
                      @level.threshold - current_user.exp
                    end
+      @users = User.pluck(:name)
     end
+    
   end
 
   def new

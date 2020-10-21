@@ -1,13 +1,13 @@
  <%= render "second_header" %>
 
- <div class="wrapper">
+<div class="wrapper">
     <div class="left-main">
        <h1>クエスト一覧</h1>
        <% if user_signed_in? %>
-       <%= @tasks.each do |task| %>
+       <% @tasks.each do |task| %>
        <%= link_to edit_task_path(task.id) do %>
        <div class="task">
-          <span class='task-btn'><%= task.content %></span>
+          <span class='task-btn'><span></span><%= task.content %></span>
        </div>
        <% end%>
        <% end %>
@@ -26,7 +26,16 @@
                <%= @user.exp %>
             </div>
             <div class="next">次のレベルまであと<%= @nextlevel %></div>
+          
+          <div class="ranking">
+          <span class="ran">ランキング</span>
+            <% @users.each do |user| %>
+            <div class="user"><%= user %></div>
+            <% end %>
           <% end %>
+          </div>  
        </div>
+       
     </div>
+   
  </div>
