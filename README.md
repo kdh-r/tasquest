@@ -48,7 +48,7 @@
 | email        | string     | null: false             |
 | password     | string     | null: false             |
 | player_level | integer    | null: false, default: 1 |
-
+| exp          | integer    | default: 0              |
 
 ## Association
 
