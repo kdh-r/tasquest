@@ -163,7 +163,7 @@ h1 {
 
 .user{
   padding-top: 20px;
-  font-size: 50px;
+  font-size: 60px;
   text-align: center;
   color: white;
 }
@@ -349,7 +349,7 @@ ul li.edit-btn{
     width: 70%;
   }
   .next{
-    margin-top: 700px;
+    margin-top: 70px;
   }
   
   .right-main{
@@ -369,6 +369,13 @@ ul li.edit-btn{
     border-left: 30px solid transparent;
     font-family: "M PLUS Rounded 1c";
     text-align: center;
+  }
+
+  .ranking{
+    position: absolute;
+    color: yellow;
+    padding-left: 150px;
+    padding-top: 400px;
   }
 
   /* リストページ */
