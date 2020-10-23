@@ -12,7 +12,7 @@ class TasksController < ApplicationController
                    else
                      @level.threshold - current_user.exp
                    end
-      @users = User.pluck(:name)
+      @users = User.order(player_level: :desc).limit(3).pluck(:name)
     end
     
   end
