@@ -14,7 +14,6 @@ class TasksController < ApplicationController
                    end
       @users = User.order(player_level: :desc).limit(3).pluck(:name)
     end
-    
   end
 
   def new
