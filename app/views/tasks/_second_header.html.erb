@@ -1,7 +1,7 @@
 <header>
   <div class="navbar">
     <% if user_signed_in? %>
-     <div class="header-name"><%= link_to current_user.name, "#" %></div>
+     <div class="header-name"><%= current_user.name %></div>
     <% else %>
       <div class="none"><%= link_to "---", "#" %></div>
     <% end %>
