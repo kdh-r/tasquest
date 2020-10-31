@@ -133,7 +133,9 @@ a:hover {
 
 h1 {
   font-size: 40px;
-  padding-left: 20px;
+  
+  text-align: center;
+  // padding-left: 20px;
   color: crimson;
   text-align: center;
   font-family: "M PLUS Rounded 1c";
@@ -143,9 +145,6 @@ h1 {
   color: white;
   font-size: 40px;
   text-align: center;
-  // padding-left: 200px;
-  // margin-top: 350px;
-  // border-bottom: 1px solid white;
   font-family: "M PLUS Rounded 1c";
 }
 
@@ -221,10 +220,10 @@ ul li.submit{
 }
 
 .text{
-  padding-left: 170px;
+  text-align: center;
 }
 .new-quest{
-  padding-right: 60px;
+  text-align: center;
   color: white;
 }
 
